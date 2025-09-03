@@ -56,9 +56,9 @@ const Footer = () => {
     }
   };
 
-  // Handle navigation clicks
+  // Handle navigation clicks - FIXED TYPE
   const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
+    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
     link: string,
     isScroll?: boolean
   ) => {
@@ -157,7 +157,7 @@ const Footer = () => {
                   {link.isScroll ? (
                     <button
                       onClick={(e) =>
-                        handleNavClick(e as any, link.link, link.isScroll)
+                        handleNavClick(e, link.link, link.isScroll)
                       }
                       className="text-gray-600 hover:text-black transition-colors cursor-pointer duration-300 font-medium text-left"
                     >

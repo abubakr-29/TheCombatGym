@@ -53,9 +53,9 @@ const Navbar = () => {
     }
   };
 
-  // Handle navigation clicks
+  // Handle navigation clicks - FIXED TYPE
   const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
+    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
     link: string,
     isScroll?: boolean
   ) => {
@@ -135,9 +135,7 @@ const Navbar = () => {
               >
                 {item.isScroll ? (
                   <button
-                    onClick={(e) =>
-                      handleNavClick(e as any, item.link, item.isScroll)
-                    }
+                    onClick={(e) => handleNavClick(e, item.link, item.isScroll)}
                     className={`font-montserrat font-bold uppercase tracking-wide text-[0.7rem] transition-all cursor-pointer duration-300 group-hover:text-[#ff383e] ${
                       isScrolled ? "text-black" : "text-white"
                     }`}
@@ -181,9 +179,7 @@ const Navbar = () => {
               >
                 {item.isScroll ? (
                   <button
-                    onClick={(e) =>
-                      handleNavClick(e as any, item.link, item.isScroll)
-                    }
+                    onClick={(e) => handleNavClick(e, item.link, item.isScroll)}
                     className={`font-montserrat font-bold uppercase text-[0.7rem] transition-all cursor-pointer duration-300 group-hover:text-[#ff383e] ${
                       isScrolled ? "text-black" : "text-white"
                     }`}
@@ -246,9 +242,7 @@ const Navbar = () => {
               <div className="group w-fit" key={item.name}>
                 {item.isScroll ? (
                   <button
-                    onClick={(e) =>
-                      handleNavClick(e as any, item.link, item.isScroll)
-                    }
+                    onClick={(e) => handleNavClick(e, item.link, item.isScroll)}
                     className="font-montserrat font-semibold cursor-pointer uppercase text-sm transition-all duration-300 text-white group-hover:text-[#ff383e]"
                   >
                     {item.name}

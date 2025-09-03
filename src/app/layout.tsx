@@ -20,6 +20,11 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "The Combat Gym",
   description: "Train To Conquer",
+  icons: {
+    icon: "/favicon/favicon.ico",
+    shortcut: "/favicon/favicon-16x16.png",
+    apple: "/favicon/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
