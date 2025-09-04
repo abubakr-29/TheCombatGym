@@ -225,6 +225,17 @@ const Footer = () => {
               </Link>{" "}
               - All rights reserved.
             </p>
+            <p className="text-gray-400 text-xs mt-2">
+              Made by{" "}
+              <a
+                href="https://famedia.co.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-black transition-colors duration-300"
+              >
+                FA Media
+              </a>
+            </p>
           </div>
         </div>
       </div>
