@@ -23,6 +23,8 @@ const Hero = () => {
         loop
         muted
         playsInline
+        preload="metadata"
+        poster="/hero_poster.png"
       />
 
       {/* Dark Overlay with Fade In */}

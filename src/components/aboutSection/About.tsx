@@ -234,6 +234,7 @@ const About = () => {
                   width={1024}
                   height={386}
                   className="w-full object-cover"
+                  priority={true}
                 />
                 <div className="absolute inset-0 bg-black/20"></div>
               </div>

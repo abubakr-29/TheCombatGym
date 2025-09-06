@@ -117,6 +117,7 @@ const ContactSection = () => {
               src="/contact.jpg"
               alt="Contact"
               className="w-full h-full object-cover"
+              priority={true}
             />
           </div>
 

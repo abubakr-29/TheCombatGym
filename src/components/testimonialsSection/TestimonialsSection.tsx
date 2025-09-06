@@ -185,6 +185,7 @@ const TestimonialsSection = () => {
         src="/testimonial_bg.jpeg"
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover -z-10"
+        priority={true}
       />
 
       {/* Dark Overlay */}
