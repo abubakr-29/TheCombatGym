@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { MoveDown } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import GymGallery from "./GymGallery";
+import { staggerContainer } from "@/framerMotion/variants";
 
 // Type definitions
 interface GalleryItem {
@@ -185,26 +186,25 @@ const GymAccordion = () => {
 
   return (
     <section>
-      <div className="w-full">
+      <motion.div
+        variants={staggerContainer(0.2, 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+        className="w-full"
+      >
         {accordionData.map((item: AccordionItem, index: number) => (
-          <motion.div
-            key={item.id}
-            id={item.id}
-            className="relative"
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-          >
+          <div key={item.id} id={item.id} className="relative">
             {/* Animated Border */}
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{
                 duration: 0.8,
-                delay: index * 0.2,
+                delay: index * 0.15,
                 ease: "easeOut",
               }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               className="absolute top-0 left-0 w-full h-[1px] bg-gray-900 origin-left"
             />
 
@@ -245,9 +245,9 @@ const GymAccordion = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -21,13 +21,12 @@ const GymGallery = ({ items }: GymGalleryProps) => {
       {items.map((item: GalleryItem, index: number) => (
         <div key={index}>
           {/* Image */}
-          <div className="relative group mb-6 overflow-hidden">
+          <div className="relative group mb-6 overflow-hidden h-64">
             <Image
               src={item.image}
               alt={item.title}
-              width={400}
-              height={256}
-              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
             {item.overlay && (
               <div className="absolute inset-0 bg-black/20 flex items-center justify-center">

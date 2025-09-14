@@ -137,16 +137,15 @@ const ContactSection = () => {
                 Contact Us
               </motion.h2>
               <motion.div
-                initial={{ height: 0 }}
-                whileInView={{ height: "2.5rem" }}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.5,
-                  ease: "easeOut",
+                variants={{
+                  hidden: { height: 0 },
+                  show: {
+                    height: "2.5rem",
+                    transition: { duration: 0.5, ease: "easeOut" },
+                  },
                 }}
-                viewport={{ once: false, amount: 0.6 }}
                 className="w-[1px] bg-black mb-1"
-              ></motion.div>
+              />
               <motion.h2
                 variants={fadeIn("up", 0)}
                 className="font-special2 font-[400] italic text-2xl md:text-3xl lg:text-4xl uppercase"

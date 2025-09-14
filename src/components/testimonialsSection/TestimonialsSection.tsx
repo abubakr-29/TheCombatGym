@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { MoveRight, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/framerMotion/variants";
 
 // Type definition
@@ -194,7 +194,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto z-20 px-6 md:px-8 lg:px-4">
         <div className="max-w-4xl text-white">
           <motion.div
-            variants={staggerContainer(0.3, 0.2)}
+            variants={staggerContainer(0, 0.2)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.6 }}
@@ -207,16 +207,15 @@ const TestimonialsSection = () => {
               Testimonials
             </motion.h1>
             <motion.div
-              initial={{ height: 0 }}
-              whileInView={{ height: "2.5rem" }}
-              transition={{
-                duration: 0.5,
-                delay: 0.5,
-                ease: "easeOut",
+              variants={{
+                hidden: { height: 0 },
+                show: {
+                  height: "2.5rem",
+                  transition: { duration: 0.5, ease: "easeOut" },
+                },
               }}
-              viewport={{ once: false, amount: 0.6 }}
               className="w-[1px] bg-white mb-1"
-            ></motion.div>
+            />
             <motion.h2
               variants={fadeIn("up", 0)}
               className="font-[400] italic text-2xl md:text-3xl lg:text-4xl uppercase"

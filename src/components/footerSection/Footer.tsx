@@ -9,6 +9,7 @@ import {
   Youtube,
 } from "lucide-react";
 import Link from "next/link";
+import { useCallback } from "react";
 
 interface QuickLink {
   name: string;
@@ -19,55 +20,41 @@ interface QuickLink {
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  // Custom smooth scroll function with cubic-bezier easing
-  const smoothScrollTo = (targetId: string, offset: number = 80) => {
+  // Updated scroll function with dynamic navbar offset (matching Option 3 from navbar)
+  const smoothScrollTo = useCallback((targetId: string) => {
     const element = document.getElementById(targetId);
-    if (element) {
-      const startPosition = window.pageYOffset;
-      const elementPosition =
-        element.getBoundingClientRect().top + window.pageYOffset;
-      const targetPosition = elementPosition - offset;
-      const distance = targetPosition - startPosition;
-      const duration = 1200; // Duration in milliseconds
-      let startTime: number | null = null;
+    if (!element) return;
 
-      // Cubic bezier easing function (0.25, 0.1, 0.25, 1.0) - smooth acceleration
-      const easeInOutCubic = (t: number): number => {
-        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-      };
+    // Get navbar height dynamically
+    const navbar = document.querySelector("header");
+    const navbarHeight = navbar ? navbar.offsetHeight : 80;
+    const extraOffset = 20; // Additional spacing
+    const totalOffset = navbarHeight + extraOffset;
 
-      const animateScroll = (currentTime: number) => {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - totalOffset;
 
-        // Apply cubic-bezier easing
-        const easeProgress = easeInOutCubic(progress);
-        const currentPosition = startPosition + distance * easeProgress;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }, []);
 
-        window.scrollTo(0, currentPosition);
-
-        if (progress < 1) {
-          requestAnimationFrame(animateScroll);
-        }
-      };
-
-      requestAnimationFrame(animateScroll);
-    }
-  };
-
-  // Handle navigation clicks - FIXED TYPE
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
-    link: string,
-    isScroll?: boolean
-  ) => {
-    if (isScroll && link.startsWith("#")) {
-      e.preventDefault();
-      const targetId = link.substring(1); // Remove the '#'
-      smoothScrollTo(targetId);
-    }
-  };
+  // Handle navigation clicks
+  const handleNavClick = useCallback(
+    (
+      e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
+      link: string,
+      isScroll?: boolean
+    ) => {
+      if (isScroll && link.startsWith("#")) {
+        e.preventDefault();
+        const targetId = link.substring(1);
+        smoothScrollTo(targetId);
+      }
+    },
+    [smoothScrollTo]
+  );
 
   const quickLinks: QuickLink[] = [
     { name: "Home", link: "/", isScroll: false },
@@ -159,14 +146,14 @@ const Footer = () => {
                       onClick={(e) =>
                         handleNavClick(e, link.link, link.isScroll)
                       }
-                      className="text-gray-600 hover:text-black transition-colors cursor-pointer duration-300 font-medium text-left"
+                      className="text-gray-600 hover:text-black transition-colors duration-300 font-medium text-left cursor-pointer"
                     >
                       {link.name}
                     </button>
                   ) : (
                     <Link
                       href={link.link}
-                      className="text-gray-600 hover:text-black transition-colors cursor-pointer duration-300 font-medium"
+                      className="text-gray-600 hover:text-black transition-colors duration-300 font-medium cursor-pointer"
                     >
                       {link.name}
                     </Link>

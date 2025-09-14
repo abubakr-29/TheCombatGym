@@ -16,57 +16,6 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
 
-  // Custom smooth scroll function with cubic-bezier easing
-  const smoothScrollTo = (targetId: string, offset: number = 80) => {
-    const element = document.getElementById(targetId);
-    if (element) {
-      const startPosition = window.pageYOffset;
-      const elementPosition =
-        element.getBoundingClientRect().top + window.pageYOffset;
-      const targetPosition = elementPosition - offset;
-      const distance = targetPosition - startPosition;
-      const duration = 1200; // Duration in milliseconds
-      let startTime: number | null = null;
-
-      // Cubic bezier easing function (0.25, 0.1, 0.25, 1.0) - smooth acceleration
-      const easeInOutCubic = (t: number): number => {
-        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-      };
-
-      const animateScroll = (currentTime: number) => {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-
-        // Apply cubic-bezier easing
-        const easeProgress = easeInOutCubic(progress);
-        const currentPosition = startPosition + distance * easeProgress;
-
-        window.scrollTo(0, currentPosition);
-
-        if (progress < 1) {
-          requestAnimationFrame(animateScroll);
-        }
-      };
-
-      requestAnimationFrame(animateScroll);
-    }
-  };
-
-  // Handle navigation clicks - FIXED TYPE
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
-    link: string,
-    isScroll?: boolean
-  ) => {
-    if (isScroll && link.startsWith("#")) {
-      e.preventDefault();
-      const targetId = link.substring(1); // Remove the '#'
-      smoothScrollTo(targetId);
-      setIsMenuOpen(false); // Close mobile menu if open
-    }
-  };
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -99,6 +48,38 @@ const Navbar = () => {
       document.body.classList.remove("overflow-hidden");
     };
   }, [isMenuOpen]);
+
+  const scrollToSection = (targetId: string) => {
+    const element = document.getElementById(targetId);
+    if (element) {
+      // Get navbar height dynamically
+      const navbar = document.querySelector("header");
+      const navbarHeight = navbar ? navbar.offsetHeight : 80;
+      const extraOffset = 20; // Additional spacing
+      const totalOffset = navbarHeight + extraOffset;
+
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - totalOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleNavClick = (
+    e: React.MouseEvent,
+    link: string,
+    isScroll?: boolean
+  ) => {
+    if (isScroll && link.startsWith("#")) {
+      e.preventDefault();
+      const targetId = link.substring(1);
+      scrollToSection(targetId);
+      setIsMenuOpen(false);
+    }
+  };
 
   const navItems1: NavItem[] = [
     { name: "Home", link: "/", isScroll: false },
@@ -136,7 +117,7 @@ const Navbar = () => {
                 {item.isScroll ? (
                   <button
                     onClick={(e) => handleNavClick(e, item.link, item.isScroll)}
-                    className={`font-montserrat font-bold uppercase tracking-wide text-[0.7rem] transition-all cursor-pointer duration-300 group-hover:text-[#ff383e] ${
+                    className={`font-montserrat font-bold uppercase tracking-wide text-[0.7rem] transition-all duration-300 group-hover:text-[#ff383e] cursor-pointer ${
                       isScrolled ? "text-black" : "text-white"
                     }`}
                   >
@@ -145,7 +126,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     href={item.link}
-                    className={`font-montserrat font-bold uppercase tracking-wide text-[0.7rem] transition-all cursor-pointer duration-300 group-hover:text-[#ff383e] ${
+                    className={`font-montserrat font-bold uppercase tracking-wide text-[0.7rem] transition-all duration-300 group-hover:text-[#ff383e] cursor-pointer ${
                       isScrolled ? "text-black" : "text-white"
                     }`}
                   >
@@ -180,7 +161,7 @@ const Navbar = () => {
                 {item.isScroll ? (
                   <button
                     onClick={(e) => handleNavClick(e, item.link, item.isScroll)}
-                    className={`font-montserrat font-bold uppercase text-[0.7rem] transition-all cursor-pointer duration-300 group-hover:text-[#ff383e] ${
+                    className={`font-montserrat font-bold uppercase text-[0.7rem] transition-all duration-300 group-hover:text-[#ff383e] cursor-pointer ${
                       isScrolled ? "text-black" : "text-white"
                     }`}
                   >
@@ -189,7 +170,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     href={item.link}
-                    className={`font-montserrat font-bold uppercase text-[0.7rem] transition-all cursor-pointer duration-300 group-hover:text-[#ff383e] ${
+                    className={`font-montserrat font-bold uppercase text-[0.7rem] transition-all duration-300 group-hover:text-[#ff383e] cursor-pointer ${
                       isScrolled ? "text-black" : "text-white"
                     }`}
                   >
@@ -243,20 +224,20 @@ const Navbar = () => {
                 {item.isScroll ? (
                   <button
                     onClick={(e) => handleNavClick(e, item.link, item.isScroll)}
-                    className="font-montserrat font-semibold cursor-pointer uppercase text-sm transition-all duration-300 text-white group-hover:text-[#ff383e]"
+                    className="font-montserrat font-semibold uppercase text-sm transition-all duration-300 text-white group-hover:text-[#ff383e]"
                   >
                     {item.name}
                   </button>
                 ) : (
                   <Link
                     href={item.link}
-                    className="font-montserrat font-semibold cursor-pointer uppercase text-sm transition-all duration-300 text-white group-hover:text-[#ff383e]"
+                    className="font-montserrat font-semibold uppercase text-sm transition-all duration-300 text-white group-hover:text-[#ff383e]"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
                 )}
-                <div className="mx-auto bg-[#ff383e] w-0 group-hover:w-full h-[1px] cursor-pointer transition-all duration-300"></div>
+                <div className="mx-auto bg-[#ff383e] w-0 group-hover:w-full h-[1px] transition-all duration-300"></div>
               </div>
             ))}
           </div>
