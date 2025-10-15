@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "The Combat Gym",
     images: [
       {
-        url: "https://thecombatgym.in/The%20Combat%20Gym%20Logo.png", // Add an OG image
+        url: "https://thecombatgym.in/The%20Combat%20Gym%20Logo.png",
         width: 1200,
         height: 630,
       },
