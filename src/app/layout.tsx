@@ -18,12 +18,45 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "The Combat Gym",
-  description: "Train To Conquer",
+  title: "The Combat Gym - Best MMA & Boxing Training in Kolkata",
+  description:
+    "Join The Combat Gym for professional MMA, Boxing, Kickboxing & fitness training. Expert coaches, modern facilities, and classes for all levels.",
+  keywords:
+    "combat gym, MMA training, boxing classes, kickboxing, fitness, Kolkata, West Bengal, martial arts, wushu, self defence, karate",
+  authors: [{ name: "The Combat Gym" }],
   icons: {
     icon: "/favicon/favicon.ico",
     shortcut: "/favicon/favicon-16x16.png",
     apple: "/favicon/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "The Combat Gym - Best MMA & Boxing Training",
+    description: "Professional combat sports training for all levels",
+    url: "https://thecombatgym.in",
+    siteName: "The Combat Gym",
+    images: [
+      {
+        url: "https://thecombatgym.in/The%20Combat%20Gym%20Logo.png", // Add an OG image
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Combat Gym - Best MMA & Boxing Training",
+    description: "Professional combat sports training for all levels",
+    images: ["https://thecombatgym.in/The%20Combat%20Gym%20Logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
