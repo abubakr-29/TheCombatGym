@@ -142,7 +142,7 @@ const Navbar = () => {
           <div className="font-bold z-50">
             <Link href="/">
               <Image
-                src="/The Combat Gym Logo.png"
+                src="/thecombatgymlogo.png"
                 width={65}
                 height={65}
                 alt="The Combat Gym Logo"
