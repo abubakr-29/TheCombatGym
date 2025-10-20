@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "The Combat Gym",
     images: [
       {
-        url: "https://thecombatgym.in/thecombatgymlogo.png",
+        url: "/thecombatgymlogo.png",
         width: 1200,
         height: 630,
       },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Combat Gym - Best MMA & Boxing Training",
     description: "Professional combat sports training for all levels",
-    images: ["https://thecombatgym.in/thecombatgymlogo.png"],
+    images: ["/thecombatgymlogo.png"],
   },
   robots: {
     index: true,
