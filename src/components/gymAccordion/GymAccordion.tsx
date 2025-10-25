@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import { MoveDown } from "lucide-react";
-import { motion } from "framer-motion";
 import GymGallery from "./GymGallery";
-import { staggerContainer } from "@/framerMotion/variants";
+import { motion } from "motion/react";
 
 // Type definitions
 interface GalleryItem {
@@ -154,7 +153,7 @@ const GymAccordion = () => {
           title: "National Championships",
           description:
             "Recognition for outstanding performances at prestigious national-level competitions and tournaments.",
-          image: "https://picsum.photos/400/300?random=14",
+          image: "",
           overlay: "National",
           visitLink: false,
         },
@@ -162,7 +161,7 @@ const GymAccordion = () => {
           title: "Certificates of Excellence",
           description:
             "Awards acknowledging consistent dedication, technical growth, and excellence in combat training.",
-          image: "https://picsum.photos/400/300?random=16",
+          image: "",
           overlay: "Certificates",
           visitLink: false,
         },
@@ -170,7 +169,7 @@ const GymAccordion = () => {
           title: "Student Achievements",
           description:
             "Celebrating the success stories of our students who excel in competitions, exams, and professional recognition.",
-          image: "https://picsum.photos/400/300?random=17",
+          image: "",
           overlay: "Students",
           visitLink: false,
         },
@@ -186,26 +185,20 @@ const GymAccordion = () => {
 
   return (
     <section>
-      <motion.div
-        variants={staggerContainer(0.2, 0.2)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.3 }}
-        className="w-full"
-      >
+      <div className="w-full">
         {accordionData.map((item: AccordionItem, index: number) => (
           <div key={item.id} id={item.id} className="relative">
             {/* Animated Border */}
             <motion.div
+              className="absolute top-0 left-0 w-full h-[1px] bg-gray-900 origin-left"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{
                 duration: 0.8,
-                delay: index * 0.15,
                 ease: "easeOut",
+                delay: index * 0.2,
               }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="absolute top-0 left-0 w-full h-[1px] bg-gray-900 origin-left"
             />
 
             <div className="container mx-auto px-6 md:px-8 lg:px-4 font-montserrat">
@@ -247,7 +240,7 @@ const GymAccordion = () => {
             </div>
           </div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };

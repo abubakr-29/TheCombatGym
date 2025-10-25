@@ -981,6 +981,10 @@
     height: 1px;
   }
 
+  .h-\[2\.5rem\] {
+    height: 2.5rem;
+  }
+
   .h-\[100vh\] {
     height: 100vh;
   }

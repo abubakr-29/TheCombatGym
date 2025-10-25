@@ -111,7 +111,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$navbar$
 const metadata = {
     title: "The Combat Gym - Best MMA & Boxing Training in Kolkata",
     description: "Join The Combat Gym for professional MMA, Boxing, Kickboxing & fitness training. Expert coaches, modern facilities, and classes for all levels.",
-    keywords: "combat gym, MMA training, boxing classes, kickboxing, fitness, Kolkata, West Bengal, martial arts, wushu, self defence, karate",
+    keywords: "the combat gym, combat gym, MMA training, boxing classes, kickboxing, fitness, Kolkata, West Bengal, martial arts, wushu, self defence, karate",
     authors: [
         {
             name: "The Combat Gym"
@@ -129,7 +129,7 @@ const metadata = {
         siteName: "The Combat Gym",
         images: [
             {
-                url: "https://thecombatgym.in/thecombatgymlogo.png",
+                url: "/thecombatgymlogo.png",
                 width: 1200,
                 height: 630
             }
@@ -142,7 +142,7 @@ const metadata = {
         title: "The Combat Gym - Best MMA & Boxing Training",
         description: "Professional combat sports training for all levels",
         images: [
-            "https://thecombatgym.in/thecombatgymlogo.png"
+            "/thecombatgymlogo.png"
         ]
     },
     robots: {

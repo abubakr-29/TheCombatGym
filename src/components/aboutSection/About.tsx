@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "@/framerMotion/variants";
+import { motion } from "motion/react";
 
 interface Slide {
   id: number;
@@ -147,29 +146,28 @@ const About = () => {
       id="about"
       className="container mx-auto overflow-hidden px-4 pt-22 font-montserrat"
     >
-      {/* Heading with Animation */}
       <motion.div
-        variants={staggerContainer(0.2)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.6 }}
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.8 }}
+        transition={{ duration: 0.6 }}
       >
         <motion.h1
-          variants={fadeIn("down", 0)}
           className="text-sm font-medium mb-2 tracking-wider uppercase"
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           WHO WE ARE
         </motion.h1>
 
         <motion.div
-          variants={{
-            hidden: { height: 0 },
-            show: {
-              height: "2.5rem",
-              transition: { duration: 0.5, ease: "easeOut" },
-            },
-          }}
           className="w-[1px] bg-black"
+          initial={{ height: 0 }}
+          whileInView={{ height: 40 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         />
       </motion.div>
 

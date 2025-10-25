@@ -3,8 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { MoveRight, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "@/framerMotion/variants";
+import { motion } from "motion/react";
 
 // Type definition
 interface TestimonialItem {
@@ -194,37 +193,43 @@ const TestimonialsSection = () => {
       <div className="container mx-auto z-20 px-6 md:px-8 lg:px-4">
         <div className="max-w-4xl text-white">
           <motion.div
-            variants={staggerContainer(0, 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.6 }}
             className="mb-8"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ duration: 0.6 }}
           >
             <motion.h1
-              variants={fadeIn("up", 0)}
               className="text-sm font-medium mb-2 tracking-wider uppercase"
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               Testimonials
             </motion.h1>
             <motion.div
-              variants={{
-                hidden: { height: 0 },
-                show: {
-                  height: "2.5rem",
-                  transition: { duration: 0.5, ease: "easeOut" },
-                },
-              }}
               className="w-[1px] bg-white mb-1"
+              initial={{ height: 0 }}
+              whileInView={{ height: 40 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             />
             <motion.h2
-              variants={fadeIn("up", 0)}
               className="font-[400] italic text-2xl md:text-3xl lg:text-4xl uppercase"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
             >
               What People Say
             </motion.h2>
             <motion.h2
-              variants={fadeIn("up", 0)}
               className="font-[650] text-[#ff383e] text-3xl md:text-4xl lg:text-5xl tracking-wider uppercase"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.8 }}
             >
               About Us
             </motion.h2>

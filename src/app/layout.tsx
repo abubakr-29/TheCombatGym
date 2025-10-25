@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   description:
     "Join The Combat Gym for professional MMA, Boxing, Kickboxing & fitness training. Expert coaches, modern facilities, and classes for all levels.",
   keywords:
-    "combat gym, MMA training, boxing classes, kickboxing, fitness, Kolkata, West Bengal, martial arts, wushu, self defence, karate",
+    "the combat gym, combat gym, MMA training, boxing classes, kickboxing, fitness, Kolkata, West Bengal, martial arts, wushu, self defence, karate",
   authors: [{ name: "The Combat Gym" }],
   icons: {
     icon: "/favicon/favicon.ico",
@@ -70,6 +71,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${montserrat.variable}  antialiased bg-texture`}
       >
+        <SmoothScroll />
         <Navbar />
         {children}
       </body>

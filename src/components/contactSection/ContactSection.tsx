@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Send } from "lucide-react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { fadeIn, staggerContainer } from "@/framerMotion/variants";
 
 interface FormData {
   name: string;
@@ -124,37 +123,46 @@ const ContactSection = () => {
           {/* Right Column - Form */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center">
             <motion.div
-              variants={staggerContainer(0.3, 0.2)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.6 }}
               className="mb-8"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 0.6 }}
             >
               <motion.h2
-                variants={fadeIn("up", 0)}
                 className="text-sm font-medium mb-2 tracking-wider uppercase text-gray-600"
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
               >
                 Contact Us
               </motion.h2>
+
               <motion.div
-                variants={{
-                  hidden: { height: 0 },
-                  show: {
-                    height: "2.5rem",
-                    transition: { duration: 0.5, ease: "easeOut" },
-                  },
-                }}
                 className="w-[1px] bg-black mb-1"
+                initial={{ height: 0 }}
+                whileInView={{ height: 40 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               />
+
               <motion.h2
-                variants={fadeIn("up", 0)}
                 className="font-special2 font-[400] italic text-2xl md:text-3xl lg:text-4xl uppercase"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
               >
                 Get in
               </motion.h2>
+
               <motion.h2
-                variants={fadeIn("up", 0)}
                 className="font-special2 font-[650] text-3xl md:text-4xl lg:text-5xl tracking-wider uppercase"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.8 }}
               >
                 Touch
               </motion.h2>

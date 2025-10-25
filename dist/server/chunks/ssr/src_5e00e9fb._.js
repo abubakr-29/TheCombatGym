@@ -1690,150 +1690,123 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$LazyMotion$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/LazyMotion/index.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$dom$2f$features$2d$animation$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/dom/features-animation.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$m$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/m/proxy.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$utils$2f$reduced$2d$motion$2f$use$2d$reduced$2d$motion$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$framerMotion$2f$variants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/framerMotion/variants.ts [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
-;
-;
+// import { LazyMotion, domAnimation, m, useReducedMotion } from "framer-motion";
+// import {
+//   fadeIn,
+//   scaleUp,
+//   staggerContainer,
+//   textVariant,
+// } from "@/framerMotion/variants";
 const Hero = ()=>{
-    const reduce = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$utils$2f$reduced$2d$motion$2f$use$2d$reduced$2d$motion$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useReducedMotion"])(); // respects user reduced-motion
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$LazyMotion$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LazyMotion"], {
-        features: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$dom$2f$features$2d$animation$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["domAnimation"],
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-            className: "relative h-[165vw] sm:h-[110vw] lg:h-screen flex items-center justify-center overflow-hidden",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$m$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["m"].video, {
-                    className: "absolute inset-0 w-full h-full object-cover",
-                    src: "/hero_bg.mp4",
-                    autoPlay: true,
-                    loop: true,
-                    muted: true,
-                    playsInline: true,
-                    preload: "metadata",
-                    poster: "/hero_poster.png"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/heroSection/Hero.tsx",
-                    lineNumber: 18,
-                    columnNumber: 9
-                }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$m$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["m"].div, {
-                    initial: reduce ? undefined : {
-                        opacity: 0
-                    },
-                    animate: reduce ? {
-                        opacity: 1
-                    } : {
-                        opacity: 1
-                    },
-                    transition: {
-                        duration: 0.7,
-                        delay: 0.2
-                    },
-                    className: "absolute inset-0 bg-black/40 z-10 will-change-[opacity]"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/heroSection/Hero.tsx",
-                    lineNumber: 30,
-                    columnNumber: 9
-                }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$m$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["m"].div, {
-                    variants: reduce ? {} : (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$framerMotion$2f$variants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["staggerContainer"])(0.18, 0.2),
-                    initial: "hidden",
-                    animate: "show",
-                    className: "relative z-20 font-poppins text-white text-center px-6 sm:px-8 md:px-12 lg:px-16 space-y-3",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$m$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["m"].h1, {
-                            variants: reduce ? {} : (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$framerMotion$2f$variants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["textVariant"])(0.05),
-                            className: "font-bold mb-4 text-3xl md:text-5xl tracking-wide text-[#ff383e] uppercase",
-                            children: "The Combat Gym"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/heroSection/Hero.tsx",
-                            lineNumber: 44,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$m$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["m"].p, {
-                            variants: reduce ? {} : (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$framerMotion$2f$variants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["fadeIn"])("up", 0.12),
-                            className: "font-semibold tracking-tight sm:tracking-wide text-md sm:text-xl md:text-2xl",
-                            children: "I'm Zakir Hossain - Elite Combat Trainer"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/heroSection/Hero.tsx",
-                            lineNumber: 51,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$m$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["m"].p, {
-                            variants: reduce ? {} : (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$framerMotion$2f$variants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["fadeIn"])("up", 0.18),
-                            className: "font-[300] leading-snug tracking-tight sm:tracking-wide text-md md:text-xl",
-                            children: "I've trained champions and transformed countless lives."
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/heroSection/Hero.tsx",
-                            lineNumber: 58,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$m$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["m"].p, {
-                            variants: reduce ? {} : (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$framerMotion$2f$variants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["fadeIn"])("up", 0.24),
-                            className: "font-[300] leading-snug tracking-tight sm:tracking-wide text-md md:text-xl",
-                            children: "I teach the committed the secrets to mastering combat and achieving greatness."
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/heroSection/Hero.tsx",
-                            lineNumber: 65,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$m$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["m"].div, {
-                            variants: reduce ? {} : (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$framerMotion$2f$variants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["scaleUp"])(0.3),
-                            className: "my-10",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$m$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["m"].div, {
-                                whileHover: !reduce ? {
-                                    scale: 1.05
-                                } : {},
-                                whileTap: !reduce ? {
-                                    scale: 0.98
-                                } : {},
-                                transition: {
-                                    type: "spring",
-                                    stiffness: 400,
-                                    damping: 17
-                                },
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                    href: "https://wa.me/+919145379014?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20your%20classes.",
-                                    target: "_blank",
-                                    className: "inline-block text-base md:text-lg bg-[#ff383e] px-6 py-4 hover:bg-white hover:text-black duration-300 transition-all font-semibold tracking-wide shadow-lg",
-                                    children: "LEARN FROM THE BEST"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/heroSection/Hero.tsx",
-                                    lineNumber: 79,
-                                    columnNumber: 15
-                                }, ("TURBOPACK compile-time value", void 0))
+    // const reduce = useReducedMotion();
+    return(// <LazyMotion features={domAnimation}>
+    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: "relative h-[165vw] sm:h-[110vw] lg:h-screen flex items-center justify-center overflow-hidden",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
+                className: "absolute inset-0 w-full h-full object-cover",
+                src: "/hero_bg.mp4",
+                autoPlay: true,
+                loop: true,
+                muted: true,
+                playsInline: true,
+                preload: "metadata",
+                poster: "/hero_poster.png"
+            }, void 0, false, {
+                fileName: "[project]/src/components/heroSection/Hero.tsx",
+                lineNumber: 18,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                // initial={reduce ? undefined : { opacity: 0 }}
+                // animate={reduce ? { opacity: 1 } : { opacity: 1 }}
+                // transition={{ duration: 0.7, delay: 0.2 }}
+                className: "absolute inset-0 bg-black/40 z-10 will-change-[opacity]"
+            }, void 0, false, {
+                fileName: "[project]/src/components/heroSection/Hero.tsx",
+                lineNumber: 30,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                // variants={reduce ? {} : staggerContainer(0.18, 0.2)}
+                // initial="hidden"
+                // animate="show"
+                className: "relative z-20 font-poppins text-white text-center px-6 sm:px-8 md:px-12 lg:px-16 space-y-3",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                        // variants={reduce ? {} : textVariant(0.05)}
+                        className: "font-bold mb-4 text-3xl md:text-5xl tracking-wide text-[#ff383e] uppercase",
+                        children: "The Combat Gym"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/heroSection/Hero.tsx",
+                        lineNumber: 44,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        // variants={reduce ? {} : fadeIn("up", 0.12)}
+                        className: "font-semibold tracking-tight sm:tracking-wide text-md sm:text-xl md:text-2xl",
+                        children: "I'm Zakir Hossain - Elite Combat Trainer"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/heroSection/Hero.tsx",
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        // variants={reduce ? {} : fadeIn("up", 0.18)}
+                        className: "font-[300] leading-snug tracking-tight sm:tracking-wide text-md md:text-xl",
+                        children: "I've trained champions and transformed countless lives."
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/heroSection/Hero.tsx",
+                        lineNumber: 58,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        // variants={reduce ? {} : fadeIn("up", 0.24)}
+                        className: "font-[300] leading-snug tracking-tight sm:tracking-wide text-md md:text-xl",
+                        children: "I teach the committed the secrets to mastering combat and achieving greatness."
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/heroSection/Hero.tsx",
+                        lineNumber: 65,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "my-10",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                href: "https://wa.me/+919145379014?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20your%20classes.",
+                                target: "_blank",
+                                className: "inline-block text-base md:text-lg bg-[#ff383e] px-6 py-4 hover:bg-white hover:text-black duration-300 transition-all font-semibold tracking-wide shadow-lg",
+                                children: "LEARN FROM THE BEST"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/heroSection/Hero.tsx",
-                                lineNumber: 74,
+                                lineNumber: 79,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/heroSection/Hero.tsx",
-                            lineNumber: 73,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/heroSection/Hero.tsx",
-                    lineNumber: 38,
-                    columnNumber: 9
-                }, ("TURBOPACK compile-time value", void 0))
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/heroSection/Hero.tsx",
-            lineNumber: 16,
-            columnNumber: 7
-        }, ("TURBOPACK compile-time value", void 0))
-    }, void 0, false, {
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/heroSection/Hero.tsx",
+                        lineNumber: 73,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/heroSection/Hero.tsx",
+                lineNumber: 38,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
         fileName: "[project]/src/components/heroSection/Hero.tsx",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 5
-    }, ("TURBOPACK compile-time value", void 0));
+    }, ("TURBOPACK compile-time value", void 0)));
 };
 const __TURBOPACK__default__export__ = Hero;
 }),
