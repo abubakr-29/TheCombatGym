@@ -212,7 +212,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`xl:hidden mobile-menu fixed inset-0 z-40 pt-30 px-10 sm:px-14 h-[100vh] w-[100%] bg-black transition-all duration-500 transform ${
+          className={`xl:hidden mobile-menu fixed inset-0 z-40 pt-30 px-10 sm:px-14 h-[100vh] w-[100%] bg-black  transition-all duration-500 transform ${
             isMenuOpen
               ? "translate-x-0"
               : "translate-x-full pointer-events-none"

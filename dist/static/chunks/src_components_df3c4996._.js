@@ -298,7 +298,7 @@ const Navbar = ()=>{
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "xl:hidden mobile-menu fixed inset-0 z-40 pt-30 px-10 sm:px-14 h-[100vh] w-[100%] bg-black transition-all duration-500 transform ".concat(isMenuOpen ? "translate-x-0" : "translate-x-full pointer-events-none"),
+                    className: "xl:hidden mobile-menu fixed inset-0 z-40 pt-30 px-10 sm:px-14 h-[100vh] w-[100%] bg-black  transition-all duration-500 transform ".concat(isMenuOpen ? "translate-x-0" : "translate-x-full pointer-events-none"),
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex flex-col space-y-8 items-center justify-center w-full h-full absolute top-0 left-0",
                         children: mobileNavItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {

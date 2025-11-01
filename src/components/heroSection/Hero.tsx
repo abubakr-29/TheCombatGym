@@ -8,18 +8,18 @@ const Hero = () => {
     <section className="relative h-[165vw] sm:h-[110vw] lg:h-screen flex items-center justify-center overflow-hidden">
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src="/hero_bg.mp4"
+        src="/thecombatgymhero_bg.mp4"
         autoPlay
         loop
         muted
         playsInline
         preload="metadata"
-        poster="/hero_poster.png"
+        poster="/herothumbnail.png"
       />
 
       {/* overlay with fade in */}
       <motion.div
-        className="absolute inset-0 bg-black/40 z-10 will-change-[opacity]"
+        className="absolute inset-0 bg-black/60 z-10 will-change-[opacity]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}

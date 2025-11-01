@@ -1549,10 +1549,6 @@
     height: 1px;
   }
 
-  .h-\[2\.5rem\] {
-    height: 2.5rem;
-  }
-
   .h-\[100vh\] {
     height: 100vh;
   }
@@ -2037,6 +2033,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-black\/50 {
       background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    }
+  }
+
+  .bg-black\/60 {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-black\/60 {
+      background-color: color-mix(in oklab, var(--color-black) 60%, transparent);
     }
   }
 

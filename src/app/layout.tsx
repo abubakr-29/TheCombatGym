@@ -68,6 +68,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" href="/herothumbnail.png" as="image" />
+        <link
+          rel="preload"
+          href="/thecombatgymhero_bg.mp4"
+          as="video"
+          type="video/mp4"
+        />
+      </head>
       <body
         className={`${poppins.variable} ${montserrat.variable}  antialiased bg-texture`}
       >
