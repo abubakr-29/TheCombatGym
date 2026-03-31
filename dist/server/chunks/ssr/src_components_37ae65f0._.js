@@ -1480,21 +1480,21 @@ const GymAccordion = ()=>{
                 {
                     title: "National Championships",
                     description: "Recognition for outstanding performances at prestigious national-level competitions and tournaments.",
-                    image: "",
+                    image: "/achievements/trophies_1.webp",
                     overlay: "National",
                     visitLink: false
                 },
                 {
                     title: "Certificates of Excellence",
                     description: "Awards acknowledging consistent dedication, technical growth, and excellence in combat training.",
-                    image: "",
+                    image: "/achievements/certificates.webp",
                     overlay: "Certificates",
                     visitLink: false
                 },
                 {
                     title: "Student Achievements",
                     description: "Celebrating the success stories of our students who excel in competitions, exams, and professional recognition.",
-                    image: "",
+                    image: "/achievements/belts.webp",
                     overlay: "Students",
                     visitLink: false
                 }
